@@ -1,8 +1,9 @@
 package com.bridgelabz.quantitymeasurement.enumeration;
 
 public enum UnitType {
+
     FEET(12, Unit.LENGTH), INCH(1, Unit.LENGTH),
-    YARD(36, Unit.LENGTH), CM(1 / 2.5, Unit.LENGTH),
+    YARD(36, Unit.LENGTH), CM(1 / 2.54, Unit.LENGTH),
 
     GALLON(3.78, Unit.VOLUME), LITRE(1, Unit.VOLUME),
     ML(1d / 1000, Unit.VOLUME),
@@ -19,4 +20,5 @@ public enum UnitType {
         this.conversionValue = conversionValue;
         this.unit = unit;
     }
+
 }

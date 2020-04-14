@@ -1,4 +1,5 @@
 package com.bridgelabz.quantitymeasurement.service.implementation;
+import com.bridgelabz.quantitymeasurement.dto.QuantityMeasurementDTO;
 import com.bridgelabz.quantitymeasurement.enumeration.Unit;
 import com.bridgelabz.quantitymeasurement.enumeration.UnitType;
 import com.bridgelabz.quantitymeasurement.service.IQuantityMeasurementService;
@@ -18,5 +19,12 @@ public class QuantityMeasurementService implements IQuantityMeasurementService {
     @Override
     public List<UnitType> getUnitType(Unit unit) {
         return Arrays.stream(UnitType.values()).filter(unitType -> unitType.unit.equals(unit)).collect(Collectors.toList());
+    }
+
+    @Override
+    public QuantityMeasurementDTO getDTO(QuantityMeasurementDTO quantityMeasurementDTO) {
+        double convertedValue = (quantityMeasurementDTO.getUnitTypeOne().conversionValue * quantityMeasurementDTO.getActualValue())/quantityMeasurementDTO.getUnitTypeTwo().conversionValue;
+        quantityMeasurementDTO.setConvertedValue(convertedValue);
+        return quantityMeasurementDTO;
     }
 }
