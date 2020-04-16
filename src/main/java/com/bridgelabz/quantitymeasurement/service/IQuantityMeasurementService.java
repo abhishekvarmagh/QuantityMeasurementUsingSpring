@@ -11,5 +11,5 @@ public interface IQuantityMeasurementService {
     List<Unit> getUnits();
     List<UnitType> getUnitType(Unit unit);
 
-    QuantityMeasurementDTO getDTO(QuantityMeasurementDTO quantityMeasurementDTO);
+    double getConvertedValue(QuantityMeasurementDTO quantityMeasurementDTO);
 }

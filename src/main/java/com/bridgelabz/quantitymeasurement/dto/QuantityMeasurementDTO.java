@@ -8,10 +8,17 @@ public class QuantityMeasurementDTO {
     UnitType unitTypeOne;
     UnitType unitTypeTwo;
     double actualValue;
-    double convertedValue;
 
-    public void setConvertedValue(double convertedValue) {
-        this.convertedValue = convertedValue;
+    public void setUnitTypeOne(UnitType unitTypeOne) {
+        this.unitTypeOne = unitTypeOne;
+    }
+
+    public void setUnitTypeTwo(UnitType unitTypeTwo) {
+        this.unitTypeTwo = unitTypeTwo;
+    }
+
+    public void setActualValue(double actualValue) {
+        this.actualValue = actualValue;
     }
 
     public UnitType getUnitTypeOne() {
@@ -26,7 +33,4 @@ public class QuantityMeasurementDTO {
         return actualValue;
     }
 
-    public double getConvertedValue() {
-        return convertedValue;
-    }
 }

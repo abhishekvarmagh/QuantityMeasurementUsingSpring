@@ -11,7 +11,7 @@ public enum UnitType {
     KG(1, Unit.WEIGHT), GRAM(1d / 1000, Unit.WEIGHT),
     TONNE(1000, Unit.WEIGHT),
 
-    CELSIUS(2.12, Unit.TEMPERATURE), FAHRENHEIT(1, Unit.TEMPERATURE);
+    CELSIUS(1.8, Unit.TEMPERATURE), FAHRENHEIT(0.555555556, Unit.TEMPERATURE);
 
     public final double conversionValue;
     public final Unit unit;
